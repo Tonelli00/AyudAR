@@ -1,0 +1,13 @@
+#Archivos de compilación
+*/bin/*
+*/obj/*
+bin/
+obj/
+Debug/
+
+#Build
+/build/
+
+#Apps Settings
+appsettings.json
+appsettings.Development.json
