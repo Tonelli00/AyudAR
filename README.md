@@ -1,4 +1,4 @@
-**# AyudAR - Aplicación para promover la colaboración social**
+# AyudAR - Aplicación para promover la colaboración social
 **AyudAR** es una plataforma web orientada a conectar personas, organizaciones no gubernamentales (ONG) y empresas con el objetivo de facilitar la colaboración en causas sociales.
 
 La aplicación permite que quienes necesitan ayuda puedan encontrar personas dispuestas a colaborar, ya sea mediante:
