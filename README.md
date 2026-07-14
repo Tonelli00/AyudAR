@@ -12,6 +12,7 @@ La aplicación permite que quienes necesitan ayuda puedan encontrar personas dis
 - Voluntariado.
 - Aportes profesionales.
 - Difusión de causas.
+
 La idea nace a partir de una problemática común: muchas personas tienen la intención de ayudar, pero no encuentran fácilmente organizaciones confiables, causas acordes a sus intereses o formas de colaborar según sus habilidades y disponibilidad.
 
 Actualmente, gran parte de las causas benéficas se difunden a través de redes sociales tradicionales, donde las publicaciones tienen una vida útil muy corta y suelen perderse entre una gran cantidad de contenido. Esto dificulta que las personas puedan descubrir oportunidades de colaboración y que las organizaciones logren alcanzar a potenciales voluntarios o donantes.
