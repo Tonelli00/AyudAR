@@ -1,3 +1,8 @@
+<div align="center">
+
+[🇪🇸 Español](README.md) | [🇬🇧 English](README.en.md)
+
+</div>
 # AyudAR - Application to promote social collaboration
 **AyudAR** is a web platform aimed at connecting people, non-governmental organizations (NGOs), and companies with the goal of facilitating collaboration in social causes.
 
