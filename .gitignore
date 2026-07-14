@@ -11,3 +11,16 @@ Debug/
 #Apps Settings
 appsettings.json
 appsettings.Development.json
+
+
+# Rider
+.idea/
+*.sln.iml
+
+
+# ASP.NET
+wwwroot/lib/
+
+# .NET
+bin/
+obj/
