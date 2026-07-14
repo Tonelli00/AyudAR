@@ -36,7 +36,7 @@ El objetivo principal de **AyudAR** es crear un espacio digital que promueva la 
 
 
 # Estado actual del proyecto
- El proyecto se encuentra en desarrollo.
+ El proyecto se encuentra ***en desarrollo***.
 ## Próximas funcionalidades a desarrollar
 - Creación de usuarios y login
 - Creación de publicaciones
