@@ -2,6 +2,7 @@ using MvcAyudAR.Models.DTOs.User;
 using MvcAyudAR.Models.Exceptions;
 using MvcAyudAR.Services.Interfaces.User;
 
+
 namespace MvcAyudAR.Services.Commands.User;
 
 public class CreateUserHandler:ICreateUserHandler
@@ -13,7 +14,7 @@ public class CreateUserHandler:ICreateUserHandler
         _repository = repository;
     }
 
-    public async Task<Models.User> CreateUser(UserRequestDTO request)
+    public async Task<MvcAyudAR.Models.User> CreateUser(UserRequestDTO request)
     {
         if (request == null)
         {
@@ -41,7 +42,7 @@ public class CreateUserHandler:ICreateUserHandler
             throw new ExceptionBadRequest("Ingrese una contraseña válida");
         }
 
-        var user = new Models.User
+        var user = new MvcAyudAR.Models.User
         {
             UserTypeId = 1,
             FullName = request.FullName,
@@ -49,6 +50,7 @@ public class CreateUserHandler:ICreateUserHandler
             Email = request.Email,
             BirthDate = request.BirthDate,
             Password = BCrypt.Net.BCrypt.HashPassword(request.Password),
+            ProfilePicture = request.ProfilePicture ?? "No tiene foto de perfil",
             Phone = request.Phone,
         };
 

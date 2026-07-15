@@ -1,0 +1,55 @@
+@model MvcAyudAR.Models.DTOs.User.UserRequestDTO
+
+@{
+    ViewData["Title"] = "Registrarse";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Registra tu cuenta</title>
+</head>
+<body>
+<form asp-action="Registration" asp-controller="User" method="post">
+
+    <div>
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" />
+        <span asp-validation-for="FullName"></span>
+    </div>
+
+     <div>
+        <label asp-for="Dni"></label>
+        <input asp-for="Dni" />
+        <span asp-validation-for="Dni"></span>
+    </div>
+        
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    
+    <div>
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone"/>
+        <span asp-validation-for="Phone"></span>
+    </div>
+    <div>
+        <label asp-for="ProfilePicture"></label>
+        <input asp-for="ProfilePicture"/>
+        <span asp-validation-for="ProfilePicture"></span>
+    </div>
+
+
+    <button type="submit">Registrarse</button>
+</form>
+</body>
+</html>
