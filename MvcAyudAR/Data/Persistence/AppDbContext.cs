@@ -24,6 +24,7 @@ public class AppDbContext : DbContext
             entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.FullName).IsRequired().HasColumnType("varchar(50)");
             entity.Property(e => e.Dni).IsRequired();
+            entity.Property(e => e.Password).IsRequired();
             entity.Property(e => e.BirthDate).IsRequired();
             entity.Property(e => e.Email).IsRequired().HasColumnType("varchar(50)");
             entity.Property(e => e.UserTypeId).IsRequired();
