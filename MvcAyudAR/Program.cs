@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using MvcAyudAR.Data;
-using MvcAyudAR.Data.Repository;
+using MvcAyudAR.Application.Services.Commands.Publication;
+using MvcAyudAR.Infrastructure;
+using MvcAyudAR.Infrastructure.Persistence;
+using MvcAyudAR.Infrastructure.Repository;
 using MvcAyudAR.Middleware;
 using MvcAyudAR.Services.Commands.User;
+using MvcAyudAR.Services.DTOs;
 using MvcAyudAR.Services.Interfaces.User;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +23,9 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICreateUserHandler, CreateUserHandler>();
 builder.Services.AddScoped<ILoginUserHandler, LoginUserHandler>();
 
+//PUBLICATION
+builder.Services.AddScoped<IPublicationRepository, PublicationRepository>();
+builder.Services.AddScoped<ICreatePublicationHandler, CreatePublicationHandler>();
 
 
 

@@ -1,0 +1,43 @@
+@model MvcAyudAR.Application.DTOs.Publication.PublicationRequestDTO
+
+
+
+@{
+    ViewData["Title"] = "Crear publicación";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Crear Publcación</title>
+</head>
+<body>
+    <form asp-action="Create" asp-controller="Publication" method="post">
+        <div>
+            <label asp-for="UserId"></label>
+            <input asp-for="UserId" />
+            <span asp-validation-for="UserId"></span>
+        </div>
+        <div>
+            <label asp-for="Title"></label>
+            <input asp-for="Title" />
+            <span asp-validation-for="Title"></span>
+       </div>
+       <div>
+          <label asp-for="Description"></label>
+          <input asp-for="Description" />
+          <span asp-validation-for="Description"></span>
+       </div>
+       <div>
+         <label asp-for="TTR">Total a recaudar</label>
+         <input asp-for="TTR" />
+         <span asp-validation-for="TTR"></span>
+      </div>
+  
+    <button type="submit">Crear publicación</button>
+   
+      
+    </form>
+</body>
+</html>
