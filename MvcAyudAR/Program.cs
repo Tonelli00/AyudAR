@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 //USER
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICreateUserHandler, CreateUserHandler>();
+builder.Services.AddScoped<ILoginUserHandler, LoginUserHandler>();
 
 
 

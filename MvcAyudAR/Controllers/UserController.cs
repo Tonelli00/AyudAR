@@ -12,9 +12,11 @@ namespace MvcAyudAR.Controllers;
 public class UserController:Controller
 {
     private readonly ICreateUserHandler _createHandler;
-    public UserController(ICreateUserHandler createHandler)
+    private readonly ILoginUserHandler _loginHandler;
+    public UserController(ICreateUserHandler createHandler, ILoginUserHandler loginHandler)
     {
         _createHandler = createHandler;
+        _loginHandler = loginHandler;
     }
     
     [HttpGet]
@@ -35,6 +37,24 @@ public class UserController:Controller
         return RedirectToAction("Index", "Home");
     }
 
+    [HttpGet]
+    public IActionResult Login()
+    {
+        return View();
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> Login(LoginRequestDTO request)
+    { 
+        if (!ModelState.IsValid)
+        {
+            return View(request);
+        }
+        await _loginHandler.LoginHandler(request);
+        
+        return RedirectToAction("Index", "Home");
+    }
+    
     
 
 

@@ -1,0 +1,30 @@
+@model MvcAyudAR.Models.DTOs.User.LoginRequestDTO
+
+@{
+    ViewData["Title"] = "Loguearse";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form asp-action="Login" asp-controller="User" method="post">
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+    
+    <button type="submit">Iniciar Sesión</button>
+    
+    </form>
+</body>
+</html>
