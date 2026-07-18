@@ -1,18 +1,42 @@
-﻿@{
+﻿@model IEnumerable<MvcAyudAR.Application.DTOs.Publication.PublicationResponseDTO>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    
+
+    <div>
     <a asp-controller="User" asp-action="Registration">
         Registrarse
     </a>
+    </div>
+
+    <div>
     <a asp-controller="User" asp-action="Login">
         Loguearse
     </a>
-  <a asp-controller="Publication" asp-action="Create">
-        Crear Publi
+    </div>
+
+    <div>
+    <a asp-controller="Publication" asp-action="Create">
+        Crear Publicación
     </a>
+    </div>
+    <div>
+      <h1>PUBLICACIONES CREADAS</h1>
+        @foreach(var pub in Model)
+        {
+        <div>
+            <h1>Titulo: @pub.Title</h1>
+            <p>Descripción: @pub.Description</p>
+            <p>Total a recaudar: @pub.TTR</p>
+            <p>Total alcanzado: @pub.CurrentlyTotal</p>            
+        </div>        
+        }
+    </div>
+
+
 </div>

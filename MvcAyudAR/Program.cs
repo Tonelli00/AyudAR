@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using MvcAyudAR.Application.Interfaces.Payments;
 using MvcAyudAR.Application.Services.Commands.Publication;
+using MvcAyudAR.Application.Services.Query.Publication;
 using MvcAyudAR.Infrastructure;
 using MvcAyudAR.Infrastructure.Persistence;
 using MvcAyudAR.Infrastructure.Repository;
@@ -26,6 +28,10 @@ builder.Services.AddScoped<ILoginUserHandler, LoginUserHandler>();
 //PUBLICATION
 builder.Services.AddScoped<IPublicationRepository, PublicationRepository>();
 builder.Services.AddScoped<ICreatePublicationHandler, CreatePublicationHandler>();
+builder.Services.AddScoped<IGetAllPublicationsHandler,GetAllPublicationsHandler>();
+
+//PAYMENT
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 
 
 

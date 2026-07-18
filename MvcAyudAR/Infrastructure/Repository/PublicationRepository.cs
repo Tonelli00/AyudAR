@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using MvcAyudAR.Domain.Entities;
 using MvcAyudAR.Infrastructure.Persistence;
 using MvcAyudAR.Services.DTOs;
@@ -19,4 +20,11 @@ public class PublicationRepository : IPublicationRepository
         await _context.SaveChangesAsync(ct);
         return publication;
     }
+
+    public async Task<List<Publication>> GetAllAsync(CancellationToken ct = default)
+    {
+        return await _context.Publications.ToListAsync(ct);
+    }
+
+   
 }
