@@ -46,9 +46,9 @@ The main objective of **AyudAR** is to create a digital space that promotes coll
 The project is currently ***under development***.
 
 ## Upcoming features to be developed
-- User creation and login
-- Creation of publications
-- Payment simulation
+- Improve Authentication
+- Search engine to view users profiles
+- Apply styles
 
 # Future Vision
 **AyudAR** aims to become a social network focused on social improvement, where people can turn the desire to help others into a reality.
