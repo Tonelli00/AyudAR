@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MvcAyudAR.Application.Interfaces.Payments;
+using MvcAyudAR.Application.Services.Commands.Payment;
 using MvcAyudAR.Application.Services.Commands.Publication;
 using MvcAyudAR.Application.Services.Query.Publication;
 using MvcAyudAR.Infrastructure;
@@ -32,7 +33,7 @@ builder.Services.AddScoped<IGetAllPublicationsHandler,GetAllPublicationsHandler>
 
 //PAYMENT
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
-
+builder.Services.AddScoped<ICreatePaymentHandler, CreatePaymentHandler>();
 
 
 var app = builder.Build();

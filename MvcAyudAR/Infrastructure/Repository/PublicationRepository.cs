@@ -23,8 +23,11 @@ public class PublicationRepository : IPublicationRepository
 
     public async Task<List<Publication>> GetAllAsync(CancellationToken ct = default)
     {
-        return await _context.Publications.ToListAsync(ct);
+        return await _context.Publications.Include(p=>p.Payments).ToListAsync(ct);
     }
 
-   
+    public async Task<Publication> GetPublicationByIdAsync(Guid PublicationId, CancellationToken ct = default)
+    {
+        return await _context.Publications.FirstOrDefaultAsync(p=>p.Id==PublicationId, ct);
+    }
 }

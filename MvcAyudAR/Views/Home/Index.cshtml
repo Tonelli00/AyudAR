@@ -34,8 +34,55 @@
             <p>Descripción: @pub.Description</p>
             <p>Total a recaudar: @pub.TTR</p>
             <p>Total alcanzado: @pub.CurrentlyTotal</p>            
-        </div>        
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#donationModal-@pub.Id">
+                
+            Simular donación
+        </button>    
+        
+        <div class="modal fade" id="donationModal-@pub.Id" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+          
+                      <div class="modal-header">
+                          <h5 class="modal-title">
+                              Donar a @pub.Title
+                          </h5>
+          
+                          <button type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal">
+                          </button>
+                      </div>
+          
+                      <div class="modal-body">
+                          <h5>Para completar la donación completa estos campos</h5>
+                          <form asp-controller="Payment" asp-action="Create" method="post">
+                              <input type="hidden"
+                                         name="PublicationId"
+                                         value="@pub.Id"/>
+                              <div>
+                                  <label>UserId</label>
+                                  <input name="UserId" type="text" class="form-control"/>
+                              </div>
+                            <div>
+                                  <label>Total a donar</label>
+                                  <input type="number" name="TotalAmount" class="form-control"/>
+                            </div>     
+                            <div class="mt-4">
+                            <button type="submit" class="btn btn-primary">Donar</button>    
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>                
+                            </div>
+                          </form>
+                      </div>
+          
+                  </div>
+              </div>
+        </div>
+        
+        
         }
+    
     </div>
 
 

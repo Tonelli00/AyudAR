@@ -14,7 +14,7 @@ public class CreatePublicationHandler:ICreatePublicationHandler
         _repository = repository;
     }
 
-    public async Task<Domain.Entities.Publication> Handle(PublicationRequestDTO request)
+    public async Task<PublicationResponseDTO> Handle(PublicationRequestDTO request)
     {
         if (String.IsNullOrWhiteSpace(request.Title))
         {
@@ -42,7 +42,13 @@ public class CreatePublicationHandler:ICreatePublicationHandler
 
         var publicationCreated = await _repository.InsertPublicationAsync(publication);
 
-        return publicationCreated;
+        return new PublicationResponseDTO
+        {
+         Id = publicationCreated.Id,
+         Description = publicationCreated.Description,
+         Title = publicationCreated.Title,
+         TTR = publicationCreated.TTR
+        };
 
     }
 }

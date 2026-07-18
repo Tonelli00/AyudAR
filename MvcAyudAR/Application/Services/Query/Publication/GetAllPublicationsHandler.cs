@@ -23,11 +23,11 @@ public class GetAllPublicationsHandler:IGetAllPublicationsHandler
         {
             result.Add(new PublicationResponseDTO
             {
-                Title   = pub.Title,
+                Id = pub.Id,
+                Title  = pub.Title,
                 Description = pub.Description,
-                CurrentlyTotal = await _paymentRepository.GetCurrentlyAmount(pub.Id),
+                CurrentlyTotal = pub.Payments.Sum(payment=>payment.TotalAmount),
                 TTR = pub.TTR,
-                
             });
         }
 

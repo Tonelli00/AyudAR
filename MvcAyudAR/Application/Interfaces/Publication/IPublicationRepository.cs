@@ -1,3 +1,4 @@
+using MvcAyudAR.Domain.Entities;
 using MvcAyudAR.Models;
 
 namespace MvcAyudAR.Services.DTOs;
@@ -6,5 +7,6 @@ public interface IPublicationRepository
 {
     Task<Domain.Entities.Publication> InsertPublicationAsync(Domain.Entities.Publication publication, CancellationToken ct = default);
     Task<List<Domain.Entities.Publication>> GetAllAsync(CancellationToken ct = default);
+    Task<Publication> GetPublicationByIdAsync(Guid PublicationId, CancellationToken ct = default);
 
 }

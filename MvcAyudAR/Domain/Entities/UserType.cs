@@ -1,4 +1,4 @@
-namespace MvcAyudAR.Models;
+namespace MvcAyudAR.Domain.Entities;
 
 public class UserType
 {

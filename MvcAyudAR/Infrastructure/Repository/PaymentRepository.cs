@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MvcAyudAR.Application.Interfaces.Payments;
+using MvcAyudAR.Domain.Entities;
 using MvcAyudAR.Infrastructure.Persistence;
 
 namespace MvcAyudAR.Infrastructure.Repository;
@@ -18,5 +19,12 @@ public class PaymentRepository : IPaymentRepository
         var total = await _context.Payments.Where(p => p.PublicationId == PublicationId)
             .SumAsync(p => p.TotalAmount, ct);
         return total;
+    }
+
+    public async Task<Payment> InsertPaymentAsync(Payment payment, CancellationToken ct = default)
+    {
+        await _context.Payments.AddAsync(payment, ct);
+        await _context.SaveChangesAsync(ct);
+        return payment;
     }
 }

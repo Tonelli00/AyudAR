@@ -5,5 +5,5 @@ namespace MvcAyudAR.Services.DTOs;
 
 public interface ICreatePublicationHandler
 {
-    Task<Domain.Entities.Publication> Handle(PublicationRequestDTO request);
+    Task<PublicationResponseDTO> Handle(PublicationRequestDTO request);
 }

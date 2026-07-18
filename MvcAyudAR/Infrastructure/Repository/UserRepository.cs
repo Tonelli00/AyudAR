@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MvcAyudAR.Domain.Entities;
 using MvcAyudAR.Infrastructure.Persistence;
-using MvcAyudAR.Models;
 using MvcAyudAR.Services.Interfaces.User;
 
 namespace MvcAyudAR.Infrastructure.Repository;
@@ -24,5 +24,10 @@ public class UserRepository : IUserRepository
     public async Task<User> GetUserByEmailAsync(string email, CancellationToken ct = default)
     {
         return await _context.Users.FirstOrDefaultAsync(u => u.Email == email, ct);
+    }
+
+    public async Task<User> GetUserByIdAsync(Guid Id, CancellationToken ct = default)
+    {
+        return await _context.Users.FirstOrDefaultAsync(u => u.Id == Id,ct);
     }
 }

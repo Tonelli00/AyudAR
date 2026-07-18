@@ -1,6 +1,6 @@
 using MvcAyudAR.Domain.Entities;
 
-namespace MvcAyudAR.Models;
+namespace MvcAyudAR.Domain.Entities;
 
 public class Payment
 {

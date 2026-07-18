@@ -14,7 +14,7 @@ public class CreateUserHandler:ICreateUserHandler
         _repository = repository;
     }
 
-    public async Task<MvcAyudAR.Models.User> CreateUser(UserRequestDTO request)
+    public async Task<Domain.Entities.User> CreateUser(UserRequestDTO request)
     {
         if (request == null)
         {
@@ -42,7 +42,7 @@ public class CreateUserHandler:ICreateUserHandler
             throw new ExceptionBadRequest("Ingrese una contraseña válida");
         }
 
-        var user = new MvcAyudAR.Models.User
+        var user = new  Domain.Entities.User
         {
             UserTypeId = 1,
             FullName = request.FullName,
