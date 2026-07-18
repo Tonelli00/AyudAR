@@ -44,9 +44,9 @@ El objetivo principal de **AyudAR** es crear un espacio digital que promueva la 
 # Estado actual del proyecto
  El proyecto se encuentra ***en desarrollo***.
 ## Próximas funcionalidades a desarrollar
-- Creación de usuarios y login
-- Creación de publicaciones
-- Simulación de pagos
+- Mejorar autenticación
+- Buscador para ver perfiles de usuarios
+- Aplicar estilos
 
 # Visión a futuro
 **AyudAR** busca convertirse en una red social enfocada en la mejora social, donde las personas pueda convertir el deseo de ayudar a los demás en una realidad
